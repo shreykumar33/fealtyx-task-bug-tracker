@@ -115,7 +115,8 @@ export default function Dashboard() {
         <Box p={6} bg={dashboardSlabColor} borderRadius="md" boxShadow="lg">
           <VStack spacing={6} align="stretch">
             <CreateTaskForm onAddTask={addTask} taskToEdit={tasks[editingIndex]} />
-            <TaskList tasks={filteredTasks} onEditTask={editTask} onDeleteTask={deleteTask} />
+
+           <TaskList tasks={filteredTasks} onEditTask={editTask} onDeleteTask={deleteTask} />
 
             {/* Toggle task trends */}
             {tasks.length > 0 && (
@@ -130,6 +131,7 @@ export default function Dashboard() {
             {/* Render TaskTrendChart if trends are toggled on */}
             {showTrends && <TaskTrendChart tasks={tasks} />}
           </VStack>
+
         </Box>
       </Box>
     </Flex>

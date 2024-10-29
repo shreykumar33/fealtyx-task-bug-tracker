@@ -10,7 +10,7 @@ export default function Login() {
   const [error, setError] = useState('');
 
   const handleLogin = () => {
-    // Simulated user credentials
+    //
     const validUser = {
       email: 't@user.com',
       password: '123',
@@ -19,7 +19,7 @@ export default function Login() {
     
     if (email === validUser.email && password === validUser.password) {
       localStorage.setItem('isLoggedIn', 'true');
-      router.push('/dashboard'); // Redirect to the dashboard
+      router.push('/dashboard'); //going back to dashboard
     } else {
       setError('Oops! Those credentials don’t look right.');
     }

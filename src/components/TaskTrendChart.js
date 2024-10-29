@@ -12,7 +12,7 @@ import {
   Legend,
 } from 'chart.js';
 
-// necessary components needed
+
 ChartJS.register(
   LinearScale,
   CategoryScale,
@@ -33,10 +33,10 @@ const TaskTrendChart = ({ tasks }) => { const chartData = useMemo(() => { const 
         dataByDate[date] = { total: 0, completed: 0, inProgress: 0 };
       }
 
-      // Increment our task and bug count
+      //here we increment our task and bug count
       dataByDate[date].total += 1;
 
-      // Incrementing as per status 
+      //as per status 
       if (task.status === 'Done') {
         dataByDate[date].completed += 1;
       } else if (task.status === 'In Progress') {
@@ -44,7 +44,7 @@ const TaskTrendChart = ({ tasks }) => { const chartData = useMemo(() => { const 
       }
     });
 
-    // giving data for the trend chart
+    //giving data for the trend chart
     const labels = Object.keys(dataByDate);
     const totalTasks = labels.map(label => dataByDate[label].total);
     const completedTasks = labels.map(label => dataByDate[label].completed);
@@ -76,6 +76,7 @@ const TaskTrendChart = ({ tasks }) => { const chartData = useMemo(() => { const 
           borderColor: 'rgba(255, 206, 86, 1)',
           backgroundColor: 'rgba(255, 206, 86, 0.2)',
 
+
           fill: true,
           borderWidth: 2,
         },
@@ -87,17 +88,17 @@ const TaskTrendChart = ({ tasks }) => { const chartData = useMemo(() => { const 
     responsive: true,
     scales: {
       x: {
-        type: 'category', // Use category scale for dates
+        type: 'category', 
       },
       y: {
-        beginAtZero: true, // Start the y-axis at zero
+        beginAtZero: true, //putting y-axis at zero
       },
     },
     plugins: {
       tooltip: {
         callbacks: {
           label: function (context) {
-            return `${context.dataset.label}: ${context.raw}`; // Tooltip formatting 
+            return `${context.dataset.label}: ${context.raw}`; 
           },
      },
     },

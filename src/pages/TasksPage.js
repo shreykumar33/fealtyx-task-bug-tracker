@@ -8,7 +8,7 @@ export default function TasksPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Retrieve tasks from local storage
+
     const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
     setTasks(storedTasks);
   }, []);
@@ -25,6 +25,7 @@ export default function TasksPage() {
           tasks.map((task, index) => (
             <Box key={index} p={4} bg="white" borderRadius="md" boxShadow="md">
               <Heading fontSize="xl" mb={2}>{task.title}</Heading>
+              
               <Text><strong>Priority:</strong> {task.priority}</Text>
               <Text><strong>Status:</strong> {task.status}</Text>
               <Text><strong>Time Spent:</strong> {task.timeSpent} hours</Text>

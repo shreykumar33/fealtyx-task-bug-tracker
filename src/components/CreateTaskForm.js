@@ -7,6 +7,7 @@ import {
   Select,
   VStack,
   Text,
+
 } from '@chakra-ui/react';
 import Timer from './Timer'; 
 
@@ -23,8 +24,8 @@ const CreateTaskForm = ({ onAddTask, taskToEdit }) => {const [title, setTitle] =
   );
   const [timeSpent, setTimeSpent] = useState(taskToEdit ? taskToEdit.timeSpent : 0);
   const [isTracking, setIsTracking] = useState(false);
-  const [intervalId, setIntervalId] = useState(null); // store interval ID for tracking
-  const [startTime, setStartTime] = useState(null); // store start time for the timer
+  const [intervalId, setIntervalId] = useState(null); 
+  const [startTime, setStartTime] = useState(null); //setting timer
 
   useEffect(() => {
     if (taskToEdit) {
@@ -42,7 +43,7 @@ const CreateTaskForm = ({ onAddTask, taskToEdit }) => {const [title, setTitle] =
     }
   }, [taskToEdit]);
 
-  // clearing interval
+  //clearing the interval
   useEffect(() => {
     return () => {
       clearInterval(intervalId);
@@ -59,8 +60,8 @@ const CreateTaskForm = ({ onAddTask, taskToEdit }) => {const [title, setTitle] =
     setTimeSpent(0);
     setIsTracking(false);
     setStartTime(null);
-    clearInterval(intervalId); //clear any ongoing timer
-    setIntervalId(null); //reset interval ID
+    clearInterval(intervalId); 
+    setIntervalId(null);
   };
 
   const handleSubmit = (e) => {
@@ -73,8 +74,8 @@ const CreateTaskForm = ({ onAddTask, taskToEdit }) => {const [title, setTitle] =
       assignee,
       dueDate,
       timeSpent,
-      isTracking, // tracking
-      startTime: isTracking ? Date.now() : null, //if tracking is active
+      isTracking, 
+      startTime: isTracking ? Date.now() : null, 
     };
     onAddTask(task);
     resetForm();
@@ -84,14 +85,15 @@ const CreateTaskForm = ({ onAddTask, taskToEdit }) => {const [title, setTitle] =
     if (isTracking) {
       //stop tracking
       setIsTracking(false);
-      clearInterval(intervalId); //clear the interval timer
-      setIntervalId(null); //reset interval ID
+      clearInterval(intervalId); 
+
+      setIntervalId(null); 
     } else {
       
       setIsTracking(true);
       setStartTime(Date.now());
       const id = setInterval(() => {
-        setTimeSpent((prev) => prev + 1 / 3600); // Increment time spent every second for simulating an actual timer
+        setTimeSpent((prev) => prev + 1 / 3600); //incrementing time spent every second for simulating an actual timer
       }, 1000);
       setIntervalId(id); 
 
@@ -100,12 +102,12 @@ const CreateTaskForm = ({ onAddTask, taskToEdit }) => {const [title, setTitle] =
 
   const handleClearTimeSpent = () => {setTimeSpent(0); };
 
-  //format time spent in hours and minutes
+  //formatting time spent properlu
   const formatTimeSpent = (time) => {
     const hours = Math.floor(time);
     const minutes = Math.round((time - hours) * 60);
     const seconds = Math.round(((time % 1) * 60) % 1 * 60); 
-    return `${hours}h ${minutes}m ${seconds}s`; //time as hours, minutes, and seconds
+    return `${hours}h ${minutes}m ${seconds}s`; 
   };
 
   return (
@@ -114,6 +116,7 @@ const CreateTaskForm = ({ onAddTask, taskToEdit }) => {const [title, setTitle] =
         <FormControl isRequired>
           <FormLabel>Title</FormLabel>
           <Input
+
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
@@ -132,9 +135,12 @@ const CreateTaskForm = ({ onAddTask, taskToEdit }) => {const [title, setTitle] =
             onChange={(e) => setPriority(e.target.value)}
           >
             <option value="">Select Priority</option>
+
             <option value="High">High</option>
             <option value="Medium">Medium</option>
             <option value="Low">Low</option>
+
+            
           </Select>
         </FormControl>
         <FormControl isRequired>

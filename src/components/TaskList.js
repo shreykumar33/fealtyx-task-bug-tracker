@@ -1,12 +1,13 @@
 import { Box, Heading, Text, HStack, Button, VStack, Icon } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { EditIcon, DeleteIcon } from '@chakra-ui/icons'; // Importing cool icons for edit and delete.
-import Timer from './Timer'; // Import the Timer for tasks and bugs.
+import { EditIcon, DeleteIcon } from '@chakra-ui/icons'; 
+import Timer from './Timer'; 
 
 const MotionBox = motion(Box);
 
 const formatTimeSpent = (time) => {const hours = Math.floor(time / 3600);const minutes = Math.floor((time % 3600) / 60);const seconds = Math.floor(time % 60);return `${hours}h ${minutes}m ${seconds}s`;
 };
+
 
 
 const getStatusColor = (status) => {
@@ -22,14 +23,16 @@ const getStatusColor = (status) => {
   }
 };
 
+
 const TaskList = ({ tasks, onEditTask, onDeleteTask }) => (
   <VStack spacing={4} align="stretch">
     {tasks.map((task, index) => (
       <MotionBox
         key={index}
         p={5}
-        bg="white" //task cards remain white for proper visibility
+        bg="white"
         borderRadius="md"
+        
         boxShadow="lg" 
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -61,10 +64,12 @@ const TaskList = ({ tasks, onEditTask, onDeleteTask }) => (
         <HStack mt={4}>
           <Button size="sm" colorScheme="yellow" onClick={() => onEditTask(index)} aria-label={`Edit task ${task.title}`}>
             <Icon as={EditIcon} mr={1} /> Edit
+
           </Button>
           <Button size="sm" colorScheme="red" onClick={() => onDeleteTask(index)} aria-label={`Delete task ${task.title}`}>
             <Icon as={DeleteIcon} mr={1} /> Delete
           </Button>
+
         </HStack>
       </MotionBox>
     ))}

@@ -8,15 +8,12 @@ const Sidebar = ({ displayName, onLogout }) => {
   const router = useRouter();
   const [isExpanded, setIsExpanded] = useState(true);
 
-  // Extract username from the provided displayName
-  const username = displayName.split('@')[0];
 
-  // Toggle sidebar expansion
+  const username = displayName.split('@')[0];
   const toggleSidebar = () => {
     setIsExpanded((prev) => !prev);
   };
 
-  // Helper function to check if a route is active
   const isActiveRoute = (path) => router.pathname === path;
 
   return (
@@ -74,11 +71,11 @@ const Sidebar = ({ displayName, onLogout }) => {
           <Tooltip label="Tasks" placement="right" isDisabled={!isExpanded}>
             <Button
               leftIcon={isExpanded ? <FiList /> : null}
-              onClick={() => router.push('/TasksPage')} // Ensure this points to /tasks
+              onClick={() => router.push('/TasksPage')} 
               w="full"
               variant="ghost"
               justifyContent={isExpanded ? 'flex-start' : 'center'}
-              colorScheme={isActiveRoute('/tasks') ? 'teal' : 'whiteAlpha'} // Check against /tasks
+              colorScheme={isActiveRoute('/tasks') ? 'teal' : 'whiteAlpha'} 
               iconSpacing={isExpanded ? 2 : 0}
               p={isExpanded ? 4 : 2}
             >
@@ -102,11 +99,14 @@ const Sidebar = ({ displayName, onLogout }) => {
               {isExpanded && 'Logout'}
               {!isExpanded && <FiLogOut />}
             </Button>
+          
           </Tooltip>
+        
         </Flex>
       </VStack>
     </Box>
-  );
+  
+);
 };
 
 export default Sidebar;
