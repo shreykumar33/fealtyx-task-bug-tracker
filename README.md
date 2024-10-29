@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#!/bin/bash
 
-## Getting Started
+# Create README.md file with project details
+cat <<EOL > README.md
+# FealtyX Task/Bug Tracker
 
-First, run the development server:
+Welcome to the **FealtyX Task/Bug Tracker**! This web application helps you manage your tasks and track your time effectively. It allows users to create, edit, and delete tasks, as well as filter them based on various criteria.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- User authentication (mocked, using local storage)
+- Create, edit, and delete tasks
+- Filter tasks by priority, status, and time spent
+- View task trends in a chart format
+- Responsive design using Chakra UI
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend:** 
+  - React.js
+  - Next.js
+  - Chakra UI
+- **State Management:** 
+  - React Hooks
+- **Data Storage:** 
+  - Local Storage (for tasks and user data)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To get started with the FealtyX Task/Bug Tracker, follow these steps:
 
-## Deploy on Vercel
+1. **Clone the repository:**
+   \`\`\`bash
+   git clone https://github.com/your-username/fealtyx-task-tracker.git
+   cd fealtyx-task-tracker
+   \`\`\`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies:**
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Run the application:**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+4. **Open your browser:**
+   Navigate to \`http://localhost:3000\` to view the application.
+
+## Usage
+
+1. **User Login:**
+   - Enter your email to log in. (The application currently supports hardcoded email validation.)
+
+2. **Dashboard:**
+   - Once logged in, you'll see the dashboard displaying your tasks.
+   - You can create new tasks using the provided form.
+   - Filter tasks by priority, status, and minimum time spent.
+
+3. **Task Management:**
+   - Click on a task to edit or delete it.
+   - You can view trends related to your tasks by toggling the task trend chart.
+
+4. **Logout:**
+   - Click the "Logout" button to exit your account.
+
+## Contributing
+
+We welcome contributions to this project! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (\`git checkout -b feature-branch\`).
+3. Make your changes and commit them (\`git commit -m 'Add new feature'\`).
+4. Push to the branch (\`git push origin feature-branch\`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any inquiries, feel free to contact:
+
+- Your Name - [your-email@example.com](mailto:your-email@example.com)
+- Project Link: [GitHub Repository](https://github.com/your-username/fealtyx-task-tracker)
+
+EOL
+
+echo "README.md file has been created successfully."
