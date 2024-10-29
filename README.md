@@ -8,9 +8,6 @@ Welcome to the **FealtyX Task/Bug Tracker**! This web application helps users ef
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Features
 
