@@ -5,14 +5,14 @@ const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'gray.50', // Change the background color
-        color: 'gray.800', // Change the text color
+        bg: 'gray.50', 
+        color: 'gray.800', 
       },
     },
   },
   colors: {
     primary: {
-      500: '#3182ce', // Customize primary color
+      500: '#3182ce', 
     },
   },
 });

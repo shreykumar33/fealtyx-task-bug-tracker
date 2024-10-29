@@ -13,7 +13,7 @@ export default function Login() {
     //
     const validUser = {
       email: 't@user.com',
-      password: '123',
+      password: '123',//even though i have hardcoded these credentials for the sake of an iterative model. User credentials should never be harcoded as it is a bad practice :)
     };
 
     

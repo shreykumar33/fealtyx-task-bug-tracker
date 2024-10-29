@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FealtyX Task/Bug Tracker
+
+A comprehensive web application designed to manage tasks and track bugs efficiently. The FealtyX Task/Bug Tracker is built using Next.js and React, providing a clean, user-friendly interface for managing tasks, logging time, and visualizing task trends.
+
+## Objective
+
+This project aims to assess frontend development skills, UI/UX design sensibilities, and proficiency with the Next.js/React.js framework by implementing a bug/task tracker web application.
+
+## Features
+
+- **User Authentication**: A simple login system using hardcoded credentials.
+- **Dashboard**: 
+  - A dashboard that displays a list of tasks with relevant details.
+  - Visualization of concurrent tasks worked on each day via a trend line.
+- **Task/Bug Creation**: 
+  - Users can create new tasks/bugs with fields such as Title, Description, Priority, Status, Assignee, and important dates.
+- **Task/Bug Management**: 
+  - Edit and delete existing tasks.
+  - Filter and sort tasks based on different criteria (priority, status, etc.).
+- **Time Tracker**: 
+  - Log the time spent on each task and display the total time spent.
+- **UI/UX**: 
+  - A clean, intuitive, and responsive design that works well on both desktop and mobile devices.
+
+## Technologies Used
+
+- **Frontend**: React, Next.js, Chakra UI
+- **State Management**: React Hooks
+- **Data Storage**: Local Storage
+
+## Live Demo
+
+You can try the live version of the FealtyX Task/Bug Tracker here: [Live Demo](https://fealtyx-task-bug-tracker-by-shrey.vercel.app/)
+
+### Test User Credentials
+- **Email**: `t@user.com`
+- **Password**: `123`
 
 ## Getting Started
 
-First, run the development server:
+To run the FealtyX Task/Bug Tracker locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Ensure you have Node.js and npm installed on your machine.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fealtyx-task-bug-tracker.git
+   cd fealtyx-task-bug-tracker
