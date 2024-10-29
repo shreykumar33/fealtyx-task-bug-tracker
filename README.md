@@ -1,42 +1,39 @@
 # FealtyX Task/Bug Tracker
 
-Welcome to the **FealtyX Task/Bug Tracker**! This web application helps users efficiently manage tasks and track time spent on various activities. Users can create, edit, delete, and filter tasks based on different criteria, providing a seamless task management experience.
-
-## Table of Contents
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
+A simple and intuitive web application for managing tasks and tracking bugs. The FealtyX Task/Bug Tracker allows users to create, edit, and delete tasks while also providing options for filtering and viewing task trends.
 
 ## Features
 
-- **User Authentication:** Simple email-based login (using hardcoded values for now).
-- **Task Management:** Create, edit, and delete tasks.
-- **Task Filtering:** Filter tasks by priority, status, and time spent.
-- **Task Trends:** Visual representation of tasks over time with charts.
-- **Responsive Design:** Optimized for both desktop and mobile viewing.
+- User-friendly interface for task management.
+- Create, edit, and delete tasks.
+- Filter tasks by priority, status, and time spent.
+- Visualize task trends with a chart.
+- Responsive design for various devices.
 
 ## Technologies Used
 
-- **Frontend:**
-  - React.js
-  - Next.js
-  - Chakra UI for styling and responsiveness
+- **Frontend:** React, Next.js, Chakra UI
 - **State Management:** React Hooks
-- **Data Storage:** Local Storage (for tasks and user data)
-
-## Installation
-
-To get started with the FealtyX Task/Bug Tracker, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/fealtyx-task-tracker.git
-   cd fealtyx-task-tracker
-
+- **Data Storage:** Local Storage
 
 ## Live Demo
 
 You can try the live version of the FealtyX Task/Bug Tracker here: [Live Demo](https://fealtyx-task-bug-tracker-by-shrey.vercel.app/)
+Test user - 
+Email: t@user.com
+password: 123
 
+## Getting Started
+
+To run the FealtyX Task/Bug Tracker locally, follow these steps:
+
+### Prerequisites
+
+- Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/fealtyx-task-bug-tracker.git
+   cd fealtyx-task-bug-tracker
