@@ -1,27 +1,40 @@
 # FealtyX Task/Bug Tracker
 
-A simple and intuitive web application for managing tasks and tracking bugs. The FealtyX Task/Bug Tracker allows users to create, edit, and delete tasks while also providing options for filtering and viewing task trends.
+A comprehensive web application designed to manage tasks and track bugs efficiently. The FealtyX Task/Bug Tracker is built using Next.js and React, providing a clean, user-friendly interface for managing tasks, logging time, and visualizing task trends.
+
+## Objective
+
+This project aims to assess frontend development skills, UI/UX design sensibilities, and proficiency with the Next.js/React.js framework by implementing a bug/task tracker web application.
 
 ## Features
 
-- User-friendly interface for task management.
-- Create, edit, and delete tasks.
-- Filter tasks by priority, status, and time spent.
-- Visualize task trends with a chart.
-- Responsive design for various devices.
+- **User Authentication**: A simple login system using hardcoded credentials.
+- **Dashboard**: 
+  - A dashboard that displays a list of tasks with relevant details.
+  - Visualization of concurrent tasks worked on each day via a trend line.
+- **Task/Bug Creation**: 
+  - Users can create new tasks/bugs with fields such as Title, Description, Priority, Status, Assignee, and important dates.
+- **Task/Bug Management**: 
+  - Edit and delete existing tasks.
+  - Filter and sort tasks based on different criteria (priority, status, etc.).
+- **Time Tracker**: 
+  - Log the time spent on each task and display the total time spent.
+- **UI/UX**: 
+  - A clean, intuitive, and responsive design that works well on both desktop and mobile devices.
 
 ## Technologies Used
 
-- **Frontend:** React, Next.js, Chakra UI
-- **State Management:** React Hooks
-- **Data Storage:** Local Storage
+- **Frontend**: React, Next.js, Chakra UI
+- **State Management**: React Hooks
+- **Data Storage**: Local Storage
 
 ## Live Demo
 
 You can try the live version of the FealtyX Task/Bug Tracker here: [Live Demo](https://fealtyx-task-bug-tracker-by-shrey.vercel.app/)
-Test user - 
-Email: t@user.com
-password: 123
+
+### Test User Credentials
+- **Email**: `t@user.com`
+- **Password**: `123`
 
 ## Getting Started
 
@@ -29,7 +42,7 @@ To run the FealtyX Task/Bug Tracker locally, follow these steps:
 
 ### Prerequisites
 
-- Node.js and npm installed on your machine.
+- Ensure you have Node.js and npm installed on your machine.
 
 ### Installation
 
